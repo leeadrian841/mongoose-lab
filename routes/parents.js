@@ -26,7 +26,7 @@ router.post('/', function (req, res) {
   newParent.save(function (err) {
     if (err) throw new Error(err)
   })
-  res.render('movies/index')
+  res.render('parents/index')
   res.send(newParent)
 })
 
