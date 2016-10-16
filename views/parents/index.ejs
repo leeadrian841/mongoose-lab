@@ -1,3 +1,15 @@
 <% include ../partials/header.ejs  %>
-<h1>Welcome to Parents' Details</h1>
+<h1>All Parents' Details</h1>
+
+<ul>
+    <% parentsArr.forEach(function(parent) { %>
+      <li>
+        Parent Name: <%= movie.name %><br>
+        Parent Email: <%= movie.year %><br>
+        Parent Age: <%= movie.rating %><br>
+        <br>
+      </li>
+    <% }) %>
+</ul>
+
 <% include ../partials/footer.ejs  %>

@@ -10,9 +10,9 @@ router.get('/create', function (req, res) {
   res.render('parents/create')
 })
 router.get('/findAll', function (req, res) {
-  Parent.find({}, function(err, parent) {
+  Parent.find({}, function(err, parents) {
   if (err) throw new Error(err)
-  res.send(parent)
+  res.send(parents)
 })
 // router.get('/findOne/:id', function (req, res) {
 //
