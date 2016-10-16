@@ -1,9 +1,10 @@
 var express = require('express')
 var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
+var parents_routes = require('./routes/parents')
+
 var app = express()
 var port = 3000
-
 // Mongoose stuff
 mongoose.connect('mongodb://localhost/school-info')
 mongoose.Promise = global.Promise
@@ -53,7 +54,6 @@ app.use(bodyParser.urlencoded({
 // parent1.save()
 // parent2.save()
 
-var parents_routes = require('./routes/parents')
 
 // app.get('/one_collection', function () {
 //   parent.save()
