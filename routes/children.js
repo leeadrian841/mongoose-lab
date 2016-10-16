@@ -1,13 +1,13 @@
 var express = require('express')
 var router = express.Router()
 
-var Parent = require('../models/parent')
+var Child = require('../models/child')
 
 router.get('/', function (req, res) {
-  res.render('parents/index')
+  res.render('children/index')
 })
 router.get('/create', function (req, res) {
-  res.render('parents/create')
+  res.render('children/create')
 })
 // router.get('/all', function (req, res) {
 //   Parent.find({}, function(err, parentsArr) {
@@ -18,16 +18,16 @@ router.get('/create', function (req, res) {
 // })
 
 router.post('/', function (req, res) {
-  var newParent = new Parent({
-    name: req.body.ParentName.name,
-    email: req.body.ParentEmail.email,
-    age: req.body.ParentAge.age
+  var newChild = new Child({
+    name: req.body.ChildName.name,
+    email: req.body.ChildEmail.email,
+    age: req.body.ChildAge.age
   })
-  newParent.save(function (err) {
+  newChild.save(function (err) {
     if (err) throw new Error(err)
   })
   res.render('movies/index')
-  res.send(newParent)
+  res.send(newChild)
 })
 
 module.exports = router

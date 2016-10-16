@@ -2,6 +2,7 @@ var express = require('express')
 var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 var parents_routes = require('./routes/parents')
+var children_routes = require('./routes/children')
 
 var app = express()
 var port = 3000
@@ -11,7 +12,7 @@ mongoose.Promise = global.Promise
 
 app.set('view engine', 'ejs')
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: true
 }))
@@ -54,7 +55,6 @@ app.use(bodyParser.urlencoded({
 // parent1.save()
 // parent2.save()
 
-
 // app.get('/one_collection', function () {
 //   parent.save()
 // })
@@ -69,4 +69,4 @@ app.use('/parents', parents_routes)
 
 // listen port
 app.listen(port)
-console.log('Server is running at http://localhost:' + port)
+console.log('Server is running at http://localhost:' + port + '/')

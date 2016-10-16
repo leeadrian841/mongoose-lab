@@ -1,13 +1,10 @@
 var mongoose = require('mongoose')
 
-// var childSchema = new mongoose.Schema({
-//   name: String,
-//   email: String
-// })
 var parentSchema = new mongoose.Schema({
   name: String,
   email: String,
   age: Number
+  // children: [childSchema]
 })
 
 var Parent = mongoose.model('Parent', parentSchema)
