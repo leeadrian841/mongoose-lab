@@ -3,12 +3,12 @@ var router = express.Router()
 var mongoose = require('mongoose')
 var Parent = require('../models/parent')
 
-// router.get('/', function (req, res) {
-//   res.render('parents/index')
-// })
-// router.get('/create', function (req, res) {
-//   res.render('parents/create')
-// })
+router.get('/', function (req, res) {
+  res.render('parents/index')
+})
+router.get('/create', function (req, res) {
+  res.render('parents/create')
+})
 // router.get('/findAll', function (req, res) {
 //   Parent.find({}, function(err, parent) {
 //   if (err) return res.send(err)
