@@ -1,6 +1,18 @@
 <% include ../partials/header.ejs  %>
 <h1>New Parent</h1>
 <form method="post" action="/parents">
+  <div class="form-group">
+    <label for="InputChildName">New Child's Name</label>
+    <input type="text" class="form-control" id="name" name="ChildName[name]" placeholder="Type Name Here">
+  </div>
+  <div class="form-group">
+    <label for="InputChildEmail">New Child's Email</label>
+    <input type="text" class="form-control" id="email" name="ChildEmail[email]" placeholder="Type Email Here">
+  </div>
+  <div class="form-group">
+    <label for="InputChildAge">New Child's Age</label>
+    <input type="text" class="form-control" id="age" name="ChildAge[age]" placeholder="Type Age Here">
+  </div>
 <div class="form-group">
   <label for="InputParentName">New Parent's Name</label>
   <input type="text" class="form-control" id="name" name="ParentName[name]" placeholder="Type Name Here">
