@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 
 var parents_routes = require('./routes/parents')
-// var children_routes = require('./routes/children')
+var children_routes = require('./routes/children')
 
 var app = express()
 var port = 3000
@@ -67,7 +67,7 @@ app.use(bodyParser.urlencoded({
 // })
 
 app.use('/parents', parents_routes)
-// app.use('/children', children_routes)
+app.use('/children', children_routes)
 
 // listen port
 app.listen(port)
